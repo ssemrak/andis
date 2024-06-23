@@ -19,6 +19,7 @@ export type TextareaProps = {
 }
 
 export type ButtonProps = {
+  active?: boolean
   disabled?: boolean
   children?: ReactNode
   className?: string

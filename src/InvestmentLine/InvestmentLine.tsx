@@ -2,7 +2,6 @@ import * as styles from './InvestmentLine.styles'
 import { investmentType } from '../data/data.types'
 
 const InvestmentLine = ({ item }: { item: investmentType }) => {
-  console.log(item)
   return (
     <div css={styles.tableStyle}>
       <div>{item.investmentName}</div>

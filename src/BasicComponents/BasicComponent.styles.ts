@@ -117,3 +117,28 @@ export const button = css`
       rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
   }
 `
+
+export const active = css`
+  box-shadow:
+    0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+  border: 2px solid #4285f4;
+`
+
+export const tile = css`
+  height: 100px;
+  width: 120px;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  overflow: hidden;
+`
+
+export const activeTile = css`
+  box-shadow:
+    0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+  border: 2px solid #4285f4;
+`

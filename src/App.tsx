@@ -4,7 +4,7 @@ import Button from './BasicComponents/Button'
 import data from './data/ZADANIE_DATA.json'
 import InvestmentLine from './InvestmentLine'
 import CreateInvestmentPage from './CreateInvestment'
-import { investmentType } from './data/data.types'
+import { investmentType } from './data'
 
 const App: FC = () => {
   const [createProcess, setCreateProcess] = useState(false)
