@@ -10,13 +10,17 @@ export const table = css`
 
 export const row = css`
   background-color: transparent;
-  cursor: pointer;
   height: 50px;
+`
+
+export const pointer = css`
+  cursor: pointer;
 `
 
 export const rowSelected = css`
   background-color: #ddd;
 `
 export const cell = css`
+  padding: 4px 10px;
   border-bottom: 2px solid #fff;
 `

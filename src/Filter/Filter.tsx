@@ -1,6 +1,6 @@
 import { data, defectTypesType, objectTypesType, voltageType } from '../data'
 import ButtonTile from '../BasicComponents/ButtonTile'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import * as styles from './Filter.styles'
 import { row } from './Filter.styles'
 import Button from '../BasicComponents/Button'

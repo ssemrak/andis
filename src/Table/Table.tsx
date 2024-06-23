@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import * as styles from './Table.styles'
 
 export type ColumnType = {
@@ -7,29 +7,31 @@ export type ColumnType = {
 }
 
 export type RowType = {
-  id: string
   [key: string]: any
 }
 
 export type TableProps = {
   columns: ColumnType[]
   data: RowType[]
+  onSelectionChanged?: (selectedIds: string[]) => void
+  onRowClick?: (id: string) => void
+  selectedRows?: string[]
 }
 
-const Table: FC<TableProps> = ({ columns, data }) => {
-  const [selectedRows, setSelectedRows] = useState<string[]>([])
-
+const Table: FC<TableProps> = ({
+  columns,
+  data,
+  onSelectionChanged,
+  onRowClick,
+  selectedRows,
+}) => {
   const handleRowClick = (id: string) => {
-    setSelectedRows(
-      selectedRows?.includes(id)
-        ? selectedRows.filter((r) => r !== id)
-        : [...selectedRows, id],
-    )
+    const newSelection = selectedRows?.includes(id)
+      ? selectedRows.filter((r) => r !== id)
+      : [...(selectedRows ?? []), id]
+    onSelectionChanged && onSelectionChanged(newSelection)
+    onRowClick && onRowClick(id)
   }
-
-  useEffect(() => {
-    setSelectedRows([])
-  }, [data])
 
   return (
     <div css={styles.table}>
@@ -42,12 +44,13 @@ const Table: FC<TableProps> = ({ columns, data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((row) => (
+          {data.map((row, index) => (
             <tr
-              key={row.id}
+              key={index}
               onClick={() => handleRowClick(row.id)}
               css={[
                 styles.row,
+                (onSelectionChanged || onRowClick) && styles.pointer,
                 selectedRows?.includes(row.id) && styles.rowSelected,
               ]}
             >

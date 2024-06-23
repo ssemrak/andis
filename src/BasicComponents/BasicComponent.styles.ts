@@ -7,7 +7,6 @@ export const input = css`
   transition: border-color 0.3s;
   font-size: 16px;
   width: 100%;
-  margin-bottom: 10px;
   box-sizing: border-box;
 
   &:focus {

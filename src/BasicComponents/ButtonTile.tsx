@@ -1,5 +1,5 @@
 import Button from './Button'
-import { activeTile, tile } from './BasicComponent.styles'
+import { tile } from './BasicComponent.styles'
 
 const ButtonTile = ({ active, name, onClick }) => (
   <Button active={active} css={tile} onClick={onClick}>

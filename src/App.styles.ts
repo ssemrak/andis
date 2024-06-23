@@ -27,3 +27,13 @@ export const appStyle = css`
     flex-direction: column;
   }
 `
+export const buttons = css`
+  display: flex;
+  gap: 14px;
+`
+
+export const form = css`
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+`

@@ -1,6 +1,10 @@
 import data from './ZADANIE_DATA.json'
 
-export type investmentType = (typeof data.investmentRequests)[0]
+const investment = data.investmentRequests[0]
+
+export type investmentType = Partial<typeof investment> & {
+  defectsCount?: number
+}
 
 const voltageLevels = [
   ...data.voltageLevels.map((item) => item.voltageLevelIdentifier),
