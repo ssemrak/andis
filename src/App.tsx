@@ -16,6 +16,7 @@ const App: FC = () => {
     <div css={styles.appStyle}>
       {!createProcess && (
         <div css={styles.contentStyle}>
+          <h2>Zoznam investicii</h2>
           <Table
             columns={[
               { id: 'investmentRequestID', label: 'ID' },
@@ -44,9 +45,8 @@ const App: FC = () => {
       {createProcess && (
         <Investment
           onSubmit={(investment) => {
-            console.log(investment)
             investment &&
-              setCreatedInvestments([...createdInvestments, investment])
+              setCreatedInvestments([investment, ...createdInvestments])
             setCreateProcess(false)
           }}
         />

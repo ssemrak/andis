@@ -22,11 +22,8 @@ export const appStyle = css`
   h2 {
     font-weight: 500;
   }
-
-  @media (max-width: 576px) {
-    flex-direction: column;
-  }
 `
+
 export const buttons = css`
   display: flex;
   gap: 14px;

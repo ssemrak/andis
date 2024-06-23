@@ -20,6 +20,7 @@ export const pointer = css`
 export const rowSelected = css`
   background-color: #ddd;
 `
+
 export const cell = css`
   padding: 4px 10px;
   border-bottom: 2px solid #fff;

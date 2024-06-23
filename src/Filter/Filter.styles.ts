@@ -8,16 +8,23 @@ export const row = css`
 
 export const relative = css`
   position: relative;
+  margin-top: 30px;
 `
 
 export const expandButton = css`
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 0;
 `
 
+export const filterRows = css`
+  max-height: 500px;
+  overflow: hidden;
+  transition: all 800ms ease;
+`
+
 export const filterRowsHidden = css`
-  height: 0;
+  max-height: 0;
   overflow: hidden;
 `
 

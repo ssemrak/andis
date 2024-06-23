@@ -7,8 +7,7 @@ import Textarea from '../../BasicComponents/Textarea'
 import Button from '../../BasicComponents/Button'
 
 type FormProps = {
-  onSubmit: (item?: investmentType) => void
-  item?: investmentType
+  onSubmit: (data?: investmentType) => void
 }
 
 const InvestmentForm: FC<FormProps> = ({ onSubmit }) => {

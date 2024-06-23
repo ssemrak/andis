@@ -36,10 +36,10 @@ const Filter = (props: FilterProps) => {
     <div css={styles.relative}>
       <div css={styles.expandButton}>
         <Button onClick={() => setShow(!show)}>
-          {show ? 'Skryt' : 'Rozbalit'}
+          {show ? 'Skryt' : 'Rozbalit'} filter
         </Button>
       </div>
-      <div css={!show && styles.filterRowsHidden}>
+      <div css={[styles.filterRows, !show && styles.filterRowsHidden]}>
         <div css={styles.row}>
           <div css={styles.label}>Voltage level</div>
           <div css={[row, styles.rowValues]}>

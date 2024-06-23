@@ -3,19 +3,19 @@ import { investmentType } from '../data'
 import PickDefects from '../PickDefects'
 import Button from '../BasicComponents/Button'
 import * as styles from './Investments.styles'
-import InvestmentForm from './Form/Form'
+import InvestmentForm from './Form'
 
 type InvestmentProps = {
   onSubmit: (item?: investmentType) => void
-  selectedCount?: number
 }
 
-const Investment: FC<InvestmentProps> = ({ onSubmit, selectedCount }) => {
+const Investment: FC<InvestmentProps> = ({ onSubmit }) => {
   const [showDefects, setShowDefects] = useState(true)
   const [selectedDefects, setSelectedDefects] = useState<string[]>([])
 
   return (
     <div>
+      <h1>Vytvorenie investicnej poziadavky</h1>
       {showDefects && (
         <PickDefects
           onSubmit={(selected) => {

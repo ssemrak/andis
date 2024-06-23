@@ -6,15 +6,10 @@ import {
 } from 'react'
 
 export type InputProps = {
-  className?: string
-  placeholder?: string
-  required?: boolean
   error?: boolean
 } & InputHTMLAttributes<HTMLInputElement>
 
 export type TextareaProps = {
-  placeholder?: string
-  required?: boolean
   error?: boolean
 } & TextareaHTMLAttributes<HTMLTextAreaElement>
 

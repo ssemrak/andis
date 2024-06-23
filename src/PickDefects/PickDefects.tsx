@@ -26,12 +26,12 @@ const PickDefects = ({ onSubmit }: PropsType) => {
       }
     })
     setSelectedRows(newSelection)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter])
 
   return (
     <div>
-      <h1>Vytvorenie investicnej poziadavky</h1>
-
+      <h2>Vyber nedostatkov</h2>
       <Filter onChange={(newFilter) => setFilter(newFilter ?? {})} />
       <Table
         data={data}
