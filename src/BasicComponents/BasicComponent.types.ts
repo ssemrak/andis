@@ -1,24 +1,20 @@
-import { ReactNode, MouseEvent } from 'react'
+import {
+  ReactNode,
+  MouseEvent,
+  TextareaHTMLAttributes,
+  InputHTMLAttributes,
+} from 'react'
 
-export type InputProps<T> = {
-  className?: string
-  placeholder?: string
-  required?: boolean
+export type InputProps = {
   error?: boolean
-  setValue: (val: T) => void
-  type?: 'text' | 'number'
-  value: T
-}
+} & InputHTMLAttributes<HTMLInputElement>
 
 export type TextareaProps = {
-  placeholder?: string
-  required?: boolean
-  setValue: (s: string) => void
-  value?: string
-  maxLength?: number
-}
+  error?: boolean
+} & TextareaHTMLAttributes<HTMLTextAreaElement>
 
 export type ButtonProps = {
+  active?: boolean
   disabled?: boolean
   children?: ReactNode
   className?: string
